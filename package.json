@@ -13,5 +13,8 @@
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "nuxt": "^3.7.3"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6"
   }
 }
