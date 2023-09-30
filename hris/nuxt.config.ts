@@ -16,11 +16,8 @@ export default defineNuxtConfig({
       ],
     },
   },
+  // modules
   modules: [
-    "@nuxtjs/axios",
-    "@nuxtjs/auth",
-    "@nuxtjs/dotenv",
-    "@nuxtjs/sitemap",
-    "@nuxtjs/tailwind",
+    
   ],
 });
