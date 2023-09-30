@@ -12,9 +12,11 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.8.0",
+    "@sidebase/nuxt-auth": "^0.6.0-beta.6",
     "nuxt": "^3.7.3"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.13.6"
+    "@nuxtjs/axios": "^5.13.6",
+    "dotenv": "^16.3.1"
   }
 }
