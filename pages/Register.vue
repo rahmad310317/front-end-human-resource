@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="py-[50px] flex flex-col items-center justify-center px-4">
-      <img src="../assets/svgs/logo-type.svg" alt="" />
+      <img src="~/assets/svgs/logo-type.svg" alt="" />
       <div class="text-[32px] font-semibold text-dark mt-[70px]">Sign Up</div>
       <p class="mt-4 text-base leading-7 text-center mb-[50px] text-grey">
         Manage your employees to achieve <br />
@@ -14,7 +14,7 @@
         </div>
         <div class="form-group">
           <label for="" class="text-grey">Email Address</label>
-          <input type="email" class="input-field" />
+          <input type="email" class="input~/assets-field" />
         </div>
         <div class="form-group">
           <label for="" class="text-grey">Password</label>
@@ -22,6 +22,9 @@
         </div>
         <a href="signin.html" class="w-full btn btn-primary mt-[14px]">
           Continue
+        </a>
+        <a href="signup.html" class="w-full btn btn-primary mt-[14px]">
+          Login
         </a>
         <!-- <button type="button" class="w-full btn btn-primary mt-[14px]">
                 Continue
