@@ -27,7 +27,7 @@ definePageMeta({
                 name="responsibility"
                 class="w-full input-field" />
               <a href="#" role="button" id="addRsp">
-                <img src="../assets/svgs/ric-plus.svg" alt="" />
+                <img src="/assets/svgs/ric-plus.svg" alt="" />
               </a>
             </li>
           </ul>
