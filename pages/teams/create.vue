@@ -14,7 +14,7 @@ definePageMeta({
       </p>
       <form class="w-full card">
         <div class="mb-[2px] mx-auto">
-          <img src="../assets/svgs/ric-box.svg" alt="" />
+          <img src="/assets/svgs/ric-box.svg" alt="" />
         </div>
         <div class="form-group">
           <label for="" class="text-grey">Email Address</label>

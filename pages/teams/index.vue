@@ -41,7 +41,7 @@ definePageMeta({
           <a
             href="#"
             class="flex-none w-[46px] h-[46px] bg-white rounded-full p-[11px] relative notification-dot">
-            <img src="../assets/svgs/ic-bell.svg" alt="" />
+            <img src="/assets/svgs/ic-bell.svg" alt="" />
           </a>
         </div>
       </section>
@@ -67,7 +67,7 @@ definePageMeta({
             <a
               href="#"
               class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"></a>
-            <img src="../assets/svgs/ric-box.svg" alt="" />
+            <img src="/assets/svgs/ric-box.svg" alt="" />
             <div class="mt-6 mb-1 font-semibold text-center text-dark">
               Growth Marketing
             </div>
@@ -77,7 +77,7 @@ definePageMeta({
             <a
               href="#"
               class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"></a>
-            <img src="../assets/svgs/ric-target.svg" alt="" />
+            <img src="/assets/svgs/ric-target.svg" alt="" />
             <div class="mt-6 mb-1 font-semibold text-center text-dark">
               User Growth
             </div>
@@ -87,7 +87,7 @@ definePageMeta({
             <a
               href="#"
               class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"></a>
-            <img src="../assets/svgs/ric-award.svg" alt="" />
+            <img src="/assets/svgs/ric-award.svg" alt="" />
             <div class="mt-6 mb-1 font-semibold text-center text-dark">
               Gamification
             </div>
