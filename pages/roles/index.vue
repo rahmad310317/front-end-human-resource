@@ -1,6 +1,6 @@
 <script setup>
 definePageMeta({
-  layout: "form",
+  layout: "dashboard",
 });
 </script>
 
