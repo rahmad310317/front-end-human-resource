@@ -44,10 +44,10 @@
       </div>
       <div class="flex flex-col gap-4">
         <div class="text-sm text-grey">Others</div>
-        <NuxtLink href="#" class="nav-link">
+        <a href="#" class="nav-link">
           <img src="/assets/svgs/ic-box.svg" alt="" />
           Insurances
-        </NuxtLink>
+        </a>
         <a href="#" class="nav-link">
           <img src="/assets/svgs/ic-home.svg" alt="" />
           Company
