@@ -25,29 +25,29 @@
       </div>
       <div class="flex flex-col gap-4">
         <div class="text-sm text-grey">Daily Use</div>
-        <a href="index.html" class="nav-link active">
+        <NuxtLink :to="{ name: 'companies-id' }" class="nav-link active">
           <img src="/assets/svgs/ic-grid.svg" alt="" />
           Overview
-        </a>
-        <a href="employees.html" class="nav-link">
+        </NuxtLink>
+        <NuxtLink :to="{ name: 'companies-id-employees' }" class="nav-link">
           <img src="/assets/svgs/ic-users.svg" alt="" />
           Employees
-        </a>
-        <a href="my_teams.html" class="nav-link">
+        </NuxtLink>
+        <NuxtLink :to="{ name: 'companies-id-teams' }" class="nav-link">
           <img src="/assets/svgs/ic-briefcase.svg" alt="" />
           My Teams
-        </a>
-        <a href="roles.html" class="nav-link">
+        </NuxtLink>
+        <NuxtLink :to="{ name: 'companies-id-teams' }" class="nav-link">
           <img src="/assets/svgs/ic-flag.svg" alt="" />
           Roles
-        </a>
+        </NuxtLink>
       </div>
       <div class="flex flex-col gap-4">
         <div class="text-sm text-grey">Others</div>
-        <a href="#" class="nav-link">
+        <NuxtLink href="#" class="nav-link">
           <img src="/assets/svgs/ic-box.svg" alt="" />
           Insurances
-        </a>
+        </NuxtLink>
         <a href="#" class="nav-link">
           <img src="/assets/svgs/ic-home.svg" alt="" />
           Company
