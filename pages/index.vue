@@ -14,7 +14,7 @@
       </button>
       <div class="text-center">or</div>
       <NuxtLink
-        :to="{ name: 'companies-create' }"
+   
         class="w-full border btn btn-white">
         Create New Company
       </NuxtLink>
