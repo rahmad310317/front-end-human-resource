@@ -7,7 +7,7 @@
         Manage your employees to achieve <br />
         a bigger goals for your company
       </p>
-      <form class="w-full card">
+      <form class="w-full card" @submit.prevent="userLogin">
         <div class="form-group">
           <label for="" class="text-grey">Email Address</label>
           <input type="email" class="input-field" />
@@ -16,13 +16,35 @@
           <label for="" class="text-grey">Password</label>
           <input type="password" class="input-field" />
         </div>
-        <a href="index.html" class="w-full btn btn-primary mt-[14px]">
+        <button type="submit" class="w-full btn btn-primary mt-[14px]">
           Sign In
-        </a>
-        <!-- <button type="button" class="w-full btn btn-primary mt-[14px]">
-                Sign In
-            </button> -->
+        </button>
       </form>
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      login: {
+        email: "",
+        password: "",
+      },
+    };
+  },
+  methods: {
+    async userLogin() {
+      try {
+        const response = await this.$auth.loginWith("local", {
+          data: this.login,
+        });
+        console.log(response);
+      } catch (err) {
+        console.log(err);
+      }
+    },
+  },
+};
+</script>
