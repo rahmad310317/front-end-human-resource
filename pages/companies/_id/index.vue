@@ -13,9 +13,7 @@
         Continue
       </button>
       <div class="text-center">or</div>
-      <NuxtLink
-        
-        class="w-full border btn btn-white">
+      <NuxtLink class="w-full border btn btn-white">
         Create New Company
       </NuxtLink>
     </div>
