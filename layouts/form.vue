@@ -8,6 +8,6 @@
         <img src="/assets/svgs/ric-close-white.svg" alt="" />
       </a>
     </div>
+    <slot />
   </div>
-  <Nuxt />
 </template>

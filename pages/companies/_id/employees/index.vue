@@ -1,7 +1,8 @@
+
 <script>
-export default {
-  layout: "dashboard",
-};
+definePageMeta({
+  layout: "form",
+});
 </script>
 
 <template>

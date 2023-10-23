@@ -1,9 +1,8 @@
 <script>
-export default {
+definePageMeta({
   layout: "form",
-};
+});
 </script>
-
 <template>
   <div>
     <section class="py-[70px] flex flex-col items-center justify-center px-4">

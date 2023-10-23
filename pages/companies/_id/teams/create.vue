@@ -1,7 +1,7 @@
 <script>
-export default {
+definePageMeta({
   layout: "dashboard",
-};
+});
 </script>
 
 <template>
@@ -22,8 +22,7 @@ export default {
             type="email"
             class="input-field disabled:bg-grey disabled:outline-none"
             value="angga@yourcompany.com"
-            disabled
-          />
+            disabled />
         </div>
         <div class="form-group">
           <label for="" class="text-grey">Team Name</label>
@@ -34,8 +33,7 @@ export default {
           <select
             name=""
             id=""
-            class="appearance-none input-field form-icon-chevron_down"
-          >
+            class="appearance-none input-field form-icon-chevron_down">
             <option value="" selected>Active</option>
             <option value="">Inactive</option>
           </select>
