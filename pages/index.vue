@@ -7,15 +7,14 @@
         <select
           name="companies"
           id=""
-          class="appearance-none input-field form-icon-chevron_down"></select>
+          class="appearance-none input-field form-icon-chevron_down"
+        ></select>
       </div>
       <button type="button" class="w-full btn btn-primary mt-[14px]">
         Continue
       </button>
       <div class="text-center">or</div>
-      <NuxtLink
-   
-        class="w-full border btn btn-white">
+      <NuxtLink class="w-full border btn btn-white">
         Create New Company
       </NuxtLink>
     </div>

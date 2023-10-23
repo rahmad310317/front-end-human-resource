@@ -1,7 +1,7 @@
-<script setup>
-definePageMeta({
-  layout: "form",
-});
+<script>
+export default {
+  layout: "dashboard",
+};
 </script>
 
 <template>
@@ -22,7 +22,8 @@ definePageMeta({
             type="email"
             class="input-field disabled:bg-grey disabled:outline-none"
             value="angga@yourcompany.com"
-            disabled />
+            disabled
+          />
         </div>
         <div class="form-group">
           <label for="" class="text-grey">Team Name</label>
@@ -33,7 +34,8 @@ definePageMeta({
           <select
             name=""
             id=""
-            class="appearance-none input-field form-icon-chevron_down">
+            class="appearance-none input-field form-icon-chevron_down"
+          >
             <option value="" selected>Active</option>
             <option value="">Inactive</option>
           </select>

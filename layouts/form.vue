@@ -9,5 +9,5 @@
       </a>
     </div>
   </div>
-  <slot />
+  <Nuxt />
 </template>

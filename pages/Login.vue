@@ -7,7 +7,7 @@
         Manage your employees to achieve <br />
         a bigger goals for your company
       </p>
-      <form class="w-full card" @submit.prevent="userLogin">
+      <form class="w-full card">
         <div class="form-group">
           <label for="" class="text-grey">Email Address</label>
           <input type="email" class="input-field" />
@@ -23,28 +23,3 @@
     </section>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      login: {
-        email: "",
-        password: "",
-      },
-    };
-  },
-  methods: {
-    async userLogin() {
-      try {
-        const response = await this.$auth.loginWith("local", {
-          data: this.login,
-        });
-        console.log(response);
-      } catch (err) {
-        console.log(err);
-      }
-    },
-  },
-};
-</script>

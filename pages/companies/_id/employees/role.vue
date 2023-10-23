@@ -1,7 +1,7 @@
-<script setup>
-definePageMeta({
+<script>
+export default {
   layout: "form",
-});
+};
 </script>
 
 <template>
@@ -23,7 +23,8 @@ definePageMeta({
           <select
             name=""
             id=""
-            class="appearance-none input-field form-icon-chevron_down">
+            class="appearance-none input-field form-icon-chevron_down"
+          >
             <option value="" selected>Product Designer</option>
             <option value="">Website Developer</option>
             <option value="">Executive Manager</option>
@@ -63,7 +64,8 @@ definePageMeta({
         </section>
         <a
           href="employee_add-to-team.html"
-          class="w-full btn btn-primary mt-[14px]">
+          class="w-full btn btn-primary mt-[14px]"
+        >
           Continue
         </a>
       </form>
