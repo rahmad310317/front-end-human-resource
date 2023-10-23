@@ -14,7 +14,7 @@
         </div>
         <div class="form-group">
           <label for="" class="text-grey">Email Address</label>
-          <input type="email" class="input~/assets-field" />
+          <input type="email" class="input-field" />
         </div>
         <div class="form-group">
           <label for="" class="text-grey">Password</label>
@@ -23,12 +23,9 @@
         <a href="signin.html" class="w-full btn btn-primary mt-[14px]">
           Continue
         </a>
-        <a href="signup.html" class="w-full btn btn-primary mt-[14px]">
+        <button type="button" class="w-full btn btn-grey mt-[14px]">
           Login
-        </a>
-        <!-- <button type="button" class="w-full btn btn-primary mt-[14px]">
-                Continue
-            </button> -->
+        </button>
       </form>
     </section>
   </div>
