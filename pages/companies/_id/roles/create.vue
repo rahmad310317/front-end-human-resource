@@ -1,8 +1,10 @@
 <script>
-definePageMeta({
+export default {
+  middleware: "auth",
   layout: "form",
-});
+};
 </script>
+
 <template>
   <div>
     <section class="py-[70px] flex flex-col items-center justify-center px-4">
@@ -24,7 +26,8 @@ definePageMeta({
                 type="text"
                 id="idRes"
                 name="responsibility"
-                class="w-full input-field" />
+                class="w-full input-field"
+              />
               <a href="#" role="button" id="addRsp">
                 <img src="/assets/svgs/ric-plus.svg" alt="" />
               </a>

@@ -4,19 +4,62 @@
     <div class="w-full card">
       <div class="form-group">
         <label for="" class="text-grey">Companies</label>
+        <p v-if="$fetchState.pending">Fetching mountains...</p>
         <select
+          v-else
+          v-if="companies.data"
+          v-model="selectedCompanies"
           name="companies"
-          id=""
           class="appearance-none input-field form-icon-chevron_down"
-        ></select>
+        >
+          <option
+            :value="company.id"
+            :key="company.id"
+            v-for="company in companies.data.data.data"
+          >
+            {{ company.name }}
+          </option>
+        </select>
       </div>
-      <button type="button" class="w-full btn btn-primary mt-[14px]">
+      <button
+        @click="openCompany()"
+        type="button"
+        class="w-full btn btn-primary mt-[14px]"
+      >
         Continue
       </button>
       <div class="text-center">or</div>
-      <NuxtLink class="w-full border btn btn-white">
+      <nuxt-link
+        to="{name: companies-id-create}"
+        class="w-full border btn btn-white"
+      >
         Create New Company
-      </NuxtLink>
+      </nuxt-link>
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  middleware: "auth",
+  data() {
+    return {
+      companies: [],
+      selectedCompanies: "",
+    };
+  },
+  async fetch() {
+    this.companies = await this.$axios.get("/company");
+  },
+  methods: {
+    openCompany() {
+      this.$router.push({
+        name: "companies-id",
+        params: {
+          id: this.selectedCompanies,
+        },
+      });
+    },
+  },
+};
+</script>

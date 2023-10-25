@@ -1,8 +1,9 @@
-
 <script>
-definePageMeta({
+export default {
   layout: "form",
-});
+
+  middleware: 'auth'
+};
 </script>
 
 <template>
@@ -63,8 +64,10 @@ definePageMeta({
               <div class="text-xl font-medium text-dark">Statistics</div>
               <p class="text-grey">Your team powers</p>
             </div>
-            <NuxtLink :to="{ name: 'employees-create' }" class="btn btn-primary"
-              >Add Employee</NuxtLink
+            <nuxt-link
+              :to="{ name: 'employees-create' }"
+              class="btn btn-primary"
+              >Add Employee</nuxt-link
             >
           </div>
         </div>

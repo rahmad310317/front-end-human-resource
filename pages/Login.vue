@@ -7,14 +7,14 @@
         Manage your employees to achieve <br />
         a bigger goals for your company
       </p>
-      <form class="w-full card">
+      <form class="w-full card" @submit.prevent="userLogin">
         <div class="form-group">
           <label for="" class="text-grey">Email Address</label>
-          <input type="email" class="input-field" />
+          <input type="email" class="input-field" v-model="login.email" />
         </div>
         <div class="form-group">
           <label for="" class="text-grey">Password</label>
-          <input type="password" class="input-field" />
+          <input type="password" class="input-field" v-model="login.password" />
         </div>
         <button type="submit" class="w-full btn btn-primary mt-[14px]">
           Sign In
@@ -23,3 +23,28 @@
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      login: {
+        email: "",
+        password: "",
+      },
+    };
+  },
+  methods: {
+    async userLogin() {
+      try {
+        const response = await this.$auth.loginWith("local", {
+          data: this.login,
+        });
+        console.log(response);
+      } catch (err) {
+        console.log(err);
+      }
+    },
+  },
+};
+</script>
