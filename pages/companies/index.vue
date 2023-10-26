@@ -1,8 +1,3 @@
-<script>
-export default {
-  middleware: "auth",
-};
-</script>
 <template>
   <section class="py-[200px] flex flex-col items-center justify-center px-4">
     <div class="text-[32px] font-semibold text-dark mb-4">Select Companies</div>
@@ -34,12 +29,12 @@ export default {
         Continue
       </button>
       <div class="text-center">or</div>
-      <nuxt-link
+      <NuxtLink
         :to="{ name: 'companies-create' }"
         class="w-full border btn btn-white"
       >
-        Create New Company
-      </nuxt-link>
+        Create a new company
+      </NuxtLink>
     </div>
   </section>
 </template>

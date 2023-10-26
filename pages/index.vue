@@ -29,12 +29,12 @@
         Continue
       </button>
       <div class="text-center">or</div>
-      <Nuxtlink
+      <NuxtLink
         :to="{ name: 'companies-create' }"
         class="w-full border btn btn-white"
       >
-        Create New Company
-      </Nuxtlink>
+        Create a new company
+      </NuxtLink>
     </div>
   </section>
 </template>
@@ -54,7 +54,7 @@ export default {
   methods: {
     openCompany() {
       this.$router.push({
-        name: "companies-id-employees",
+        name: "companies-id",
         params: {
           id: this.selectedCompanies,
         },

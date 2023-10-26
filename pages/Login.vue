@@ -24,6 +24,13 @@
         <button type="submit" class="w-full btn btn-primary mt-[14px]">
           Sign In
         </button>
+        <div class="text-center">or</div>
+        <NuxtLink
+          :to="{ name: 'register' }"
+          class="w-full border btn btn-white"
+        >
+          Create Account
+        </NuxtLink>
       </form>
     </section>
   </div>
