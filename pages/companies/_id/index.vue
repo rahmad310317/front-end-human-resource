@@ -1,9 +1,3 @@
-<script>
-export default {
-  layout: "dashboard",
-};
-</script>
-
 <template>
   <div>
     <!-- Main Content -->
@@ -31,7 +25,7 @@ export default {
               ></path>
             </svg>
           </a>
-          <div class="text-[32px] font-semibold text-dark">Employees</div>
+          <div class="text-[32px] font-semibold text-dark">Overview</div>
         </div>
         <div class="flex items-center gap-4">
           <form class="shrink md:w-[516px] w-full">
@@ -39,13 +33,33 @@ export default {
               type="text"
               name=""
               id=""
-              class="input-field !outline-none !border-none italic form-icon-search ring-indigo-200 focus:ring-2 transition-all duration-300 w-full"
+              class="
+                input-field
+                !outline-none
+                !border-none
+                italic
+                form-icon-search
+                ring-indigo-200
+                focus:ring-2
+                transition-all
+                duration-300
+                w-full
+              "
               placeholder="Search people, team, project"
             />
           </form>
           <a
             href="#"
-            class="flex-none w-[46px] h-[46px] bg-white rounded-full p-[11px] relative notification-dot"
+            class="
+              flex-none
+              w-[46px]
+              h-[46px]
+              bg-white
+              rounded-full
+              p-[11px]
+              relative
+              notification-dot
+            "
           >
             <img src="/assets/svgs/ic-bell.svg" alt="" />
           </a>
@@ -55,196 +69,100 @@ export default {
       <section class="pt-[50px]">
         <!-- Section Header -->
         <div class="mb-[30px]">
-          <div
-            class="flex flex-col justify-between gap-6 sm:items-center sm:flex-row"
-          >
+          <div class="flex items-center justify-between gap-6">
             <div>
               <div class="text-xl font-medium text-dark">Statistics</div>
-              <p class="text-grey">Your team powers</p>
+              <p class="text-grey">Your business growth</p>
             </div>
-            <NuxtLink :to="{ name: 'employees-create' }" class="btn btn-primary"
-              >Add Employee</NuxtLink
-            >
           </div>
         </div>
 
         <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-11">
-          <div class="card !gap-y-10">
+          <div class="card !gap-y-10 min-h-[200px]">
             <div class="flex items-center justify-between">
               <div>
-                <p class="text-grey">In Total</p>
-                <div class="text-[32px] font-bold text-dark mt-[6px]">
-                  425,000
-                </div>
+                <p class="text-grey">Employees</p>
+                <div class="text-[32px] font-bold text-dark mt-[6px]">0</div>
               </div>
+              <NuxtLink :to="{ name: 'employees-create' }"
+                ><img src="/assets/svgs/ric-plus.svg" alt=""
+              /></NuxtLink>
             </div>
           </div>
-          <div class="card !gap-y-10">
+          <div class="card !gap-y-10 min-h-[200px]">
             <div class="flex items-center justify-between">
               <div>
-                <p class="text-grey">Active</p>
-                <div class="text-[32px] font-bold text-dark mt-[6px]">
-                  205,399
-                </div>
+                <p class="text-grey">Teams</p>
+                <div class="text-[32px] font-bold text-dark mt-[6px]">0</div>
               </div>
+              <a href="#">
+                <img src="/assets/svgs/ric-plus.svg" alt="" />
+              </a>
             </div>
           </div>
-          <div class="card !gap-y-10">
+          <div class="card !gap-y-10 min-h-[200px]">
             <div class="flex items-center justify-between">
               <div>
-                <p class="text-grey">Inactive</p>
-                <div class="text-[32px] font-bold text-dark mt-[6px]">
-                  142,593
-                </div>
+                <p class="text-grey">Projects</p>
+                <div class="text-[32px] font-bold text-dark mt-[6px]">0</div>
               </div>
+              <a href="#">
+                <img src="/assets/svgs/ric-plus.svg" alt="" />
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       <section class="pt-[50px]">
-        <!-- Section Header -->
-        <div class="mb-[30px]">
-          <div class="flex items-center justify-between gap-6">
-            <div>
-              <div class="text-xl font-medium text-dark">People</div>
-              <p class="text-grey">The rangers</p>
+        <div class="grid md:grid-cols-2 gap-11">
+          <!-- Documents -->
+          <div>
+            <!-- Section Header -->
+            <div class="mb-[30px]">
+              <div class="flex items-center justify-between gap-6">
+                <div>
+                  <div class="text-xl font-medium text-dark">Documents</div>
+                  <p class="text-grey">Standard procedure</p>
+                </div>
+              </div>
+            </div>
+            <div class="card md:min-h-[468px]">
+              <div class="m-auto text-center">
+                <div class="text-xl font-bold text-dark">No Documents</div>
+                <p class="text-grey mt-5 mb-[30px]">
+                  Add guidance or design style for <br />
+                  your employees in company
+                </p>
+                <button type="button" class="btn btn-primary">
+                  Upload File
+                </button>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div
-          class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:gap-10 lg:gap-3"
-        >
-          <!-- Card -->
-          <div class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
-            <a
-              href="#"
-              class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"
-            ></a>
-            <img src="/assets/images/user-f-1.png" width="70" alt="" />
-            <div class="mt-6 mb-1 font-semibold text-center text-dark">
-              Andini Danna
+          <!-- History -->
+          <div>
+            <!-- Section Header -->
+            <div class="mb-[30px]">
+              <div class="flex items-center justify-between gap-6">
+                <div>
+                  <div class="text-xl font-medium text-dark">History</div>
+                  <p class="text-grey">Track the flow</p>
+                </div>
+              </div>
             </div>
-            <p class="text-center text-grey">Product Designer</p>
-            <div class="mt-[30px] text-success flex items-center gap-[6px]">
-              <img src="/assets/svgs/ic-check-circle.svg" alt="" />
-              Verified
-            </div>
-          </div>
-          <div class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
-            <a
-              href="#"
-              class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"
-            ></a>
-            <img src="/assets/images/user-m-1.png" width="70" alt="" />
-            <div class="mt-6 mb-1 font-semibold text-center text-dark">
-              Ferrari Three
-            </div>
-            <p class="text-center text-grey">Quality Manager</p>
-            <div class="mt-[30px] text-success flex items-center gap-[6px]">
-              <img src="/assets//svgs/ic-check-circle.svg" alt="" />
-              Verified
-            </div>
-          </div>
-          <!-- Card -->
-          <div class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
-            <a
-              href="#"
-              class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"
-            ></a>
-            <img src="/assets/images/user-m-2.png" width="70" alt="" />
-            <div class="mt-6 mb-1 font-semibold text-center text-dark">
-              Sapiire Muke
-            </div>
-            <p class="text-center text-grey">iOS Engineer</p>
-            <a
-              href="#verify"
-              class="text-blue-700 mt-[30px] underline relative z-20"
-            >
-              Verify Now
-            </a>
-          </div>
-          <!-- Card -->
-          <div class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
-            <a
-              href="#"
-              class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"
-            ></a>
-            <img src="/assets/images/user-f-2.png" width="70" alt="" />
-            <div class="mt-6 mb-1 font-semibold text-center text-dark">
-              Mw Kemanna
-            </div>
-            <p class="text-center text-grey">Website Developer</p>
-            <div class="mt-[30px] text-success flex items-center gap-[6px]">
-              <img src="/assets//svgs/ic-check-circle.svg" alt="" />
-              Verified
-            </div>
-          </div>
-          <!-- Card -->
-          <div class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
-            <a
-              href="#"
-              class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"
-            ></a>
-            <img src="/assets/images/user-m-3.png" width="70" alt="" />
-            <div class="mt-6 mb-1 font-semibold text-center text-dark">
-              Onna Appa
-            </div>
-            <p class="text-center text-grey">Product Designer</p>
-            <div class="mt-[30px] text-success flex items-center gap-[6px]">
-              <img src="/assets//svgs/ic-check-circle.svg" alt="" />
-              Verified
-            </div>
-          </div>
-          <!-- Card -->
-          <div class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
-            <a
-              href="#"
-              class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"
-            ></a>
-            <img src="/assets/images/user-f-3.png" width="70" alt="" />
-            <div class="mt-6 mb-1 font-semibold text-center text-dark">
-              Hehe Nadiia
-            </div>
-            <p class="text-center text-grey">Quality Manager</p>
-            <div class="mt-[30px] text-success flex items-center gap-[6px]">
-              <img src="/assets//svgs/ic-check-circle.svg" alt="" />
-              Verified
-            </div>
-          </div>
-          <!-- Card -->
-          <div class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
-            <a
-              href="#"
-              class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"
-            ></a>
-            <img src="/assets/images/user-m-4.png" width="70" alt="" />
-            <div class="mt-6 mb-1 font-semibold text-center text-dark">
-              Jamboel
-            </div>
-            <p class="text-center text-grey">iOS Engineer</p>
-            <a
-              href="#verify"
-              class="text-blue-700 mt-[30px] underline relative z-20"
-            >
-              Verify Now
-            </a>
-          </div>
-          <!-- Card -->
-          <div class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
-            <a
-              href="#"
-              class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"
-            ></a>
-            <img src="/assets/images/user-f-4.png" width="70" alt="" />
-            <div class="mt-6 mb-1 font-semibold text-center text-dark">
-              Eksis Melita
-            </div>
-            <p class="text-center text-grey">Website Developer</p>
-            <div class="mt-[30px] text-success flex items-center gap-[6px]">
-              <img src="/assets//svgs/ic-check-circle.svg" alt="" />
-              Verified
+            <div class="card min-h-[468px]">
+              <div class="m-auto text-center">
+                <div class="text-xl font-bold text-dark">No History</div>
+                <p class="text-grey mt-5 mb-[30px]">
+                  Information of employees added <br />
+                  and promoting shown here
+                </p>
+                <button type="button" class="btn btn-primary">
+                  Upload File
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -252,3 +170,9 @@ export default {
     </div>
   </div>
 </template>
+<script>
+export default {
+    layout: 'dashboard',
+    middleware: 'auth'
+}
+</script>
