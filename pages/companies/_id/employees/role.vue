@@ -1,8 +1,8 @@
+
 <script>
-export default {
+definePageMeta({
   layout: "dashboard",
-   middleware: "auth",
-};
+});
 </script>
 
 <template>

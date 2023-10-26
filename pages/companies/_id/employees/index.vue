@@ -1,8 +1,8 @@
+
 <script>
-export default {
-  layout: "dashboard",
-  middleware: "auth",
-};
+definePageMeta({
+  layout: "form",
+});
 </script>
 
 <template>
@@ -63,10 +63,8 @@ export default {
               <div class="text-xl font-medium text-dark">Statistics</div>
               <p class="text-grey">Your team powers</p>
             </div>
-            <nuxt-link
-              :to="{ name: 'employees-create' }"
-              class="btn btn-primary"
-              >Add Employee</nuxt-link
+            <NuxtLink :to="{ name: 'employees-create' }" class="btn btn-primary"
+              >Add Employee</NuxtLink
             >
           </div>
         </div>

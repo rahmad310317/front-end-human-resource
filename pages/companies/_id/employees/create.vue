@@ -20,8 +20,7 @@
           <select
             name=""
             id=""
-            class="appearance-none input-field form-icon-chevron_down"
-          >
+            class="appearance-none input-field form-icon-chevron_down">
             <option value="" selected>Male</option>
             <option value="">Female</option>
           </select>
@@ -32,8 +31,7 @@
         </div>
         <a
           href="employee_create-2.html"
-          class="w-full btn btn-primary mt-[14px]"
-        >
+          class="w-full btn btn-primary mt-[14px]">
           Continue
         </a>
       </form>
@@ -42,8 +40,7 @@
 </template>
 
 <script>
-export default {
-  middleware: "auth",
+definePageMeta({
   layout: "dashboard",
-};
+});
 </script>

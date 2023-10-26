@@ -1,9 +1,3 @@
-<script>
-export default {
-  middleware: "auth",
-};
-</script>
-
 <template>
   <div>
     <section class="py-[70px] flex flex-col items-center justify-center px-4">
@@ -13,8 +7,7 @@ export default {
         company reaching their goals
       </p>
       <div
-        class="w-full card !max-w-[560px] sm:!flex-row items-center justify-between"
-      >
+        class="w-full card !max-w-[560px] sm:!flex-row items-center justify-between">
         <div class="flex flex-row items-center gap-4">
           <img src="/assets/images/user-f-1.png" width="70" alt="" />
           <div>
@@ -39,17 +32,14 @@ export default {
 
         <form>
           <div
-            class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:gap-10 lg:gap-3 mb-[50px]"
-          >
+            class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:gap-10 lg:gap-3 mb-[50px]">
             <div
-              class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0"
-            >
+              class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
               <input
                 type="radio"
                 name="productGrowth"
                 id="productGrowth"
-                class="absolute inset-0 checked:ring-2 ring-primary rounded-[26px] appearance-none"
-              />
+                class="absolute inset-0 checked:ring-2 ring-primary rounded-[26px] appearance-none" />
               <img src="/assets/svgs/ric-box.svg" alt="" />
               <div class="mt-6 mb-1 font-semibold text-center text-dark">
                 Product Growth
@@ -57,14 +47,12 @@ export default {
               <p class="text-center text-grey">810 People</p>
             </div>
             <div
-              class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0"
-            >
+              class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
               <input
                 type="radio"
                 name="marketing"
                 id="marketing"
-                class="absolute inset-0 checked:ring-2 ring-primary rounded-[26px] appearance-none"
-              />
+                class="absolute inset-0 checked:ring-2 ring-primary rounded-[26px] appearance-none" />
               <img src="/assets/svgs/ric-target.svg" alt="" />
               <div class="mt-6 mb-1 font-semibold text-center text-dark">
                 Marketing
@@ -72,14 +60,12 @@ export default {
               <p class="text-center text-grey">15,810 People</p>
             </div>
             <div
-              class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0"
-            >
+              class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
               <input
                 type="radio"
                 name="globalization"
                 id="globalization"
-                class="absolute inset-0 checked:ring-2 ring-primary rounded-[26px] appearance-none"
-              />
+                class="absolute inset-0 checked:ring-2 ring-primary rounded-[26px] appearance-none" />
               <img src="/assets/svgs/ric-globe.svg" alt="" />
               <div class="mt-6 mb-1 font-semibold text-center text-dark">
                 Globalization
@@ -87,14 +73,12 @@ export default {
               <p class="text-center text-grey">300 People</p>
             </div>
             <div
-              class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0"
-            >
+              class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
               <input
                 type="radio"
                 name="gamification"
                 id="gamification"
-                class="absolute inset-0 checked:ring-2 ring-primary rounded-[26px] appearance-none"
-              />
+                class="absolute inset-0 checked:ring-2 ring-primary rounded-[26px] appearance-none" />
               <img src="/assets/svgs/ric-award.svg" alt="" />
               <div class="mt-6 mb-1 font-semibold text-center text-dark">
                 Gamification
@@ -106,8 +90,7 @@ export default {
             <a
               href="employees.html"
               id="continueBtn"
-              class="hidden btn btn-primary"
-            >
+              class="hidden btn btn-primary">
               Continue
             </a>
           </div>

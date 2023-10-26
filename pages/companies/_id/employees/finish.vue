@@ -1,8 +1,7 @@
 <script>
-export default {
-  middleware: "auth",
+definePageMeta({
   layout: "form",
-};
+});
 </script>
 
 <template>
@@ -25,8 +24,7 @@ export default {
         </div>
         <a
           href="employee_create-3.html"
-          class="w-full btn btn-primary mt-[14px]"
-        >
+          class="w-full btn btn-primary mt-[14px]">
           Continue
         </a>
       </form>

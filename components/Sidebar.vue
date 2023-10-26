@@ -28,10 +28,7 @@
       </div>
       <div class="flex flex-col gap-4">
         <div class="text-sm text-grey">Daily Use</div>
-        <nuxt-link
-          :to="{ name: 'companies-id-employees' }"
-          class="nav-link active"
-        >
+        <nuxt-link :to="{ name: 'companies-id' }" class="nav-link">
           <img src="/assets/svgs/ic-grid.svg" alt="" />
           Overview
         </nuxt-link>
