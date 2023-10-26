@@ -1,7 +1,7 @@
 <script>
 export default {
-  middleware: 'auth'
-}
+  middleware: "auth",
+};
 </script>
 <template>
   <section class="py-[200px] flex flex-col items-center justify-center px-4">
@@ -35,7 +35,7 @@ export default {
       </button>
       <div class="text-center">or</div>
       <nuxt-link
-        :to="{ name: 'companies-id' }"
+        :to="{ name: 'companies-create' }"
         class="w-full border btn btn-white"
       >
         Create New Company
