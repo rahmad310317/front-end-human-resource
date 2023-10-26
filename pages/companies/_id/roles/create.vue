@@ -1,7 +1,7 @@
 <script>
-definePageMeta({
+export default {
   layout: "form",
-});
+};
 </script>
 <template>
   <div>
@@ -24,7 +24,8 @@ definePageMeta({
                 type="text"
                 id="idRes"
                 name="responsibility"
-                class="w-full input-field" />
+                class="w-full input-field"
+              />
               <a href="#" role="button" id="addRsp">
                 <img src="/assets/svgs/ric-plus.svg" alt="" />
               </a>

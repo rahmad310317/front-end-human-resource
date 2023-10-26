@@ -1,5 +1,4 @@
 <template>
-  <!-- Sidebar -->
   <div
     class="hidden lg:block fixed lg:max-w-[295px] w-full overflow-y-auto h-full bg-white z-[999]"
     id="sidebarHRIS"
@@ -7,7 +6,7 @@
     <div class="px-6 py-[50px] gap-y-[50px] flex flex-col">
       <div class="flex items-center justify-between">
         <a href="#" class="flex justify-center">
-          <img src="assets/svgs/logo-type.svg" alt="" />
+          <img src="/assets/svgs/logo-type.svg" alt="" />
         </a>
         <a href="#" id="toggleCloseSidebar" class="lg:hidden">
           <svg
@@ -28,22 +27,22 @@
       </div>
       <div class="flex flex-col gap-4">
         <div class="text-sm text-grey">Daily Use</div>
-        <nuxt-link :to="{ name: 'companies-id' }" class="nav-link">
+        <NuxtLink :to="{ name: 'companies-id' }" class="nav-link">
           <img src="/assets/svgs/ic-grid.svg" alt="" />
           Overview
-        </nuxt-link>
-        <nuxt-link :to="{ name: 'companies-id-employees' }" class="nav-link">
+        </NuxtLink>
+        <NuxtLink :to="{ name: 'companies-id-employees' }" class="nav-link">
           <img src="/assets/svgs/ic-users.svg" alt="" />
           Employees
-        </nuxt-link>
-        <nuxt-link :to="{ name: 'companies-id-teams' }" class="nav-link">
+        </NuxtLink>
+        <NuxtLink :to="{ name: 'companies-id-teams' }" class="nav-link">
           <img src="/assets/svgs/ic-briefcase.svg" alt="" />
           My Teams
-        </nuxt-link>
-        <nuxt-link :to="{ name: 'companies-id-roles' }" class="nav-link">
+        </NuxtLink>
+        <NuxtLink :to="{ name: 'companies-id-roles' }" class="nav-link">
           <img src="/assets/svgs/ic-flag.svg" alt="" />
           Roles
-        </nuxt-link>
+        </NuxtLink>
       </div>
       <div class="flex flex-col gap-4">
         <div class="text-sm text-grey">Others</div>
@@ -63,10 +62,10 @@
           <img src="/assets/svgs/ic-settings.svg" alt="" />
           Settings
         </a>
-        <a href="#" class="nav-link">
+        <button class="nav-link">
           <img src="/assets/svgs/ic-signout.svg" alt="" />
           Logout
-        </a>
+        </button>
       </div>
     </div>
   </div>

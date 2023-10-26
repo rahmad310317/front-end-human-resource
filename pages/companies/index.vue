@@ -54,7 +54,7 @@ export default {
   methods: {
     openCompany() {
       this.$router.push({
-        name: "companies-id-employees",
+        name: "companies-id",
         params: {
           id: this.selectedCompanies,
         },

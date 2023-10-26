@@ -29,12 +29,12 @@
         Continue
       </button>
       <div class="text-center">or</div>
-      <nuxt-link
-        :to="{ name: 'companies-id' }"
+      <Nuxtlink
+        :to="{ name: 'companies-create' }"
         class="w-full border btn btn-white"
       >
         Create New Company
-      </nuxt-link>
+      </Nuxtlink>
     </div>
   </section>
 </template>

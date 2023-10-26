@@ -1,7 +1,7 @@
 <script>
-definePageMeta({
+export default {
   layout: "form",
-});
+};
 </script>
 
 <template>
@@ -24,7 +24,8 @@ definePageMeta({
         </div>
         <a
           href="employee_create-3.html"
-          class="w-full btn btn-primary mt-[14px]">
+          class="w-full btn btn-primary mt-[14px]"
+        >
           Continue
         </a>
       </form>
