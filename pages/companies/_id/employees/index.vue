@@ -1,6 +1,6 @@
 <script>
 export default {
-  layout: "form",
+  layout: "dashboard",
 };
 </script>
 
