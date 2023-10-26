@@ -21,6 +21,7 @@
           <input
             type="password"
             class="input-field"
+            @keyup.enter="userRegister"
             v-model="register.password"
           />
         </div>

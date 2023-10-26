@@ -4,15 +4,15 @@
     <div class="w-full card">
       <div class="form-group">
         <label for="" class="text-grey">Companies</label>
-        <p v-if="$fetchState.pending">Fetching mountains...</p>
+        <p v-if="$fetchState.pending">Fetching Companies...</p>
         <select
           v-else
-          v-if="companies.data"
           v-model="selectedCompanies"
           name="companies"
           class="appearance-none input-field form-icon-chevron_down"
         >
           <option
+            @keyup.enter="openCompany"
             :value="company.id"
             :key="company.id"
             v-for="company in companies.data.data.data"

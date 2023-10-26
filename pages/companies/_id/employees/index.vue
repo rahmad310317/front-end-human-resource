@@ -1,8 +1,7 @@
 <script>
 export default {
-  layout: "form",
-
-  middleware: 'auth'
+  layout: "dashboard",
+  middleware: "auth",
 };
 </script>
 

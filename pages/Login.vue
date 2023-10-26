@@ -14,7 +14,12 @@
         </div>
         <div class="form-group">
           <label for="" class="text-grey">Password</label>
-          <input type="password" class="input-field" v-model="login.password" />
+          <input
+            type="password"
+            class="input-field"
+            @keyup.enter="userLogin"
+            v-model="login.password"
+          />
         </div>
         <button type="submit" class="w-full btn btn-primary mt-[14px]">
           Sign In
@@ -48,3 +53,4 @@ export default {
   },
 };
 </script>
+d
