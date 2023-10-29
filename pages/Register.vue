@@ -28,6 +28,10 @@
         <button type="submit" class="w-full btn btn-primary mt-[14px]">
           Continue
         </button>
+         <div class="text-center">or</div>
+        <NuxtLink :to="{ name: 'login' }" class="w-full border btn btn-white">
+          Login
+        </NuxtLink>
       </form>
     </section>
   </div>
