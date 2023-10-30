@@ -10,7 +10,7 @@ export default {
   async fetch() {
     this.teams = await this.$axios.get("/team", {
       params: {
-        company_id: 1,
+        company_id: this.$route.params.id,
         limit: 100,
       },
     });
@@ -74,10 +74,12 @@ export default {
           >
             <div>
               <div class="text-xl font-medium text-dark">Available</div>
-              <p class="text-grey">Empower company</p>
+              <p class="text-grey">Employees Teams</p>
             </div>
-            <a href="my-teams_create.html" class="btn btn-primary"
-              >Build New Team</a
+            <NuxtLink
+              :to="{ name: 'companies-id-employees-create' }"
+              class="btn btn-primary"
+              >Build New Team</NuxtLink
             >
           </div>
         </div>

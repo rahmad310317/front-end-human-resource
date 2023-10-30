@@ -1,6 +1,6 @@
 <script>
 export default {
-  layout: "dashboard",
+  layout: "form",
 };
 </script>
 
@@ -43,6 +43,7 @@ export default {
         <a href="my_teams.html" class="w-full btn btn-primary mt-[14px]">
           Continue
         </a>
+        
       </form>
     </section>
   </div>

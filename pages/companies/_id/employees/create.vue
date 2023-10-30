@@ -6,7 +6,7 @@
         Add your new people to grow the <br />
         company reaching their goals
       </p>
-      <form class="w-full card">
+      <form class="w-full card" @submit.prevent="createEmployees">
         <div class="form-group">
           <label for="" class="text-grey">Complete Name</label>
           <input type="text" class="input-field" />
@@ -30,12 +30,19 @@
           <label for="" class="text-grey">Age</label>
           <input type="number" class="input-field" />
         </div>
-        <a
-          href="employee_create-2.html"
+        <NuxtLink
+          :to="{ name: 'companies-id-employees-create' }"
           class="w-full btn btn-primary mt-[14px]"
         >
           Continue
-        </a>
+        </NuxtLink>
+        <div class="text-center">or</div>
+        <NuxtLink
+          :to="{ name: 'companies-id-teams' }"
+          class="w-full border btn btn-white"
+        >
+          Back to Teams
+        </NuxtLink>
       </form>
     </section>
   </div>
@@ -43,7 +50,7 @@
 
 <script>
 export default {
-  layout: "dashboard",
-  middleware: 'auth'
+  layout: "form",
+  middleware: "auth",
 };
 </script>
