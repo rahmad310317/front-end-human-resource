@@ -2,8 +2,13 @@
 export default {
   layout: "dashboard",
 
-  middleware: 'auth'
-  
+  middleware: "auth",
+
+  data() {
+    return {
+      roles: [],
+    };
+  },
 };
 </script>
 

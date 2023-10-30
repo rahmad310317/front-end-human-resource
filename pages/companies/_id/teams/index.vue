@@ -2,18 +2,23 @@
 export default {
   layout: "dashboard",
 
+  middleware: "auth",
   data() {
     return {
       teams: [],
     };
   },
   async fetch() {
-    this.teams = await this.$axios.get("/team", {
-      params: {
-        company_id: 1,
-        limit: 100,
-      },
-    });
+    try {
+      this.teams = await this.$axios.get("/team", {
+        params: {
+          company_id: 1,
+          limit: 100,
+        },
+      });
+    } catch (error) {
+      console.log(error);
+    }
   },
 };
 </script>
