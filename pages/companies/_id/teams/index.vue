@@ -10,7 +10,7 @@ export default {
   async fetch() {
     this.teams = await this.$axios.get("/team", {
       params: {
-        company_id: this.$route.params.id,
+        company_id: 1,
         limit: 100,
       },
     });

@@ -9,13 +9,14 @@ export default {
     };
   },
   async fetch() {
-    this.employees = await this.$axios.get("/employees", {
-      params: {
-        // team_id: this.$route.params.id,
-        // role_id: this.$route.params.id,
-        // limit: 100,
-      },
-    });
+    try {
+      this.employees = await this.$axios.get("/employee", {
+        params: {
+          company_id: 1,
+          limit: 100,
+        },
+      });
+    } catch (error) {}
   },
 };
 </script>
@@ -137,20 +138,20 @@ export default {
           <div
             class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0"
             v-else
-            v-for="employee in employees.data"
+            v-for="employee in employees.data.data.data"
           >
             <a
               href="#"
               class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"
             ></a>
-            <img :src="employee.icon" width="70" alt="" />
+            <img :src="employee.photo" width="70" alt="" />
             <div class="mt-6 mb-1 font-semibold text-center text-dark">
               {{ employee.name }}
             </div>
-            <p class="text-center text-grey">{{ employee.role }}</p>
+            <p class="text-center text-grey">{{ employee.role.name }}</p>
             <div class="mt-[30px] text-success flex items-center gap-[6px]">
               <img src="/assets/svgs/ic-check-circle.svg" alt="" />
-              {{ employee.is_verified }}
+              Verified
             </div>
           </div>
         </div>
