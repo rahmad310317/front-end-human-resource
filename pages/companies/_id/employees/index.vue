@@ -151,11 +151,19 @@ export default {
               {{ employee.name }}
             </div>
             <p class="text-center text-grey">{{ employee.role.name }}</p>
-            <div class="mt-[30px] text-success flex items-center gap-[6px]">
+            <div
+              v-if="employee.verified_at != null"
+              class="mt-[30px] text-success flex items-center gap-[6px]"
+            >
               <img src="/assets/svgs/ic-check-circle.svg" alt="" />
               Verified
             </div>
-            
+            <a
+              v-else
+              href="#verify"
+              class="text-blue-700 mt-[30px] underline relative z-20"
+              >Verified Now</a
+            >
           </div>
         </div>
       </section>

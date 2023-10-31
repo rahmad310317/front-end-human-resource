@@ -61,20 +61,22 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
           <!-- card -->
-          <p v-if="$fetchState.pending">Fetching Employees...</p>
+          <p v-if="$fetchState.pending">Fetching Roles...</p>
           <div
             class="items-center card !flex-row gap-4"
-            v-else=""
+            v-else
             v-for="role in roles.data.data.data"
           >
             <a
               href="#"
               class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"
             ></a>
-            <img :src="role.icon" alt="" />
+            <img src="/assets/svgs/ric-flag.svg" alt="" />
             <div>
               <div class="mb-1 font-semibold text-dark">{{ role.name }}</div>
-              <p class="text-grey">12 people Responsibilty</p>
+              <p class="text-grey">
+                {{ role.responsibilities_count }} Responsibilty
+              </p>
             </div>
           </div>
         </div>
@@ -87,23 +89,18 @@
 export default {
   layout: "dashboard",
   middleware: "auth",
-
   data() {
     return {
       roles: [],
     };
   },
   async fetch() {
-    try {
-      this.roles = await this.$axios.get("/role", {
-        params: {
-          company_id: this.$route.params.id,
-          limit: 100,
-        },
-      });
-    } catch (error) {
-      console.log(error);
-    }
+    this.roles = await this.$axios.get("/role", {
+      params: {
+        company_id: 1,
+        limit: 100,
+      },
+    });
   },
 };
 </script>
