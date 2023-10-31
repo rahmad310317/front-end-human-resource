@@ -16,7 +16,9 @@ export default {
           limit: 100,
         },
       });
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   },
 };
 </script>
@@ -153,6 +155,7 @@ export default {
               <img src="/assets/svgs/ic-check-circle.svg" alt="" />
               Verified
             </div>
+            
           </div>
         </div>
       </section>

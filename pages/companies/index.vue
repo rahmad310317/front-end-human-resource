@@ -49,7 +49,11 @@ export default {
     };
   },
   async fetch() {
-    this.companies = await this.$axios.get("/company");
+    try {
+      this.companies = await this.$axios.get("/company");
+    } catch (error) {
+      console.log(error);
+    }
   },
   methods: {
     openCompany() {
