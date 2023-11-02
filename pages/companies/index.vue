@@ -12,7 +12,6 @@
           class="appearance-none input-field form-icon-chevron_down"
         >
           <option
-            @keyup.enter="openCompany"
             :value="company.id"
             :key="company.id"
             v-for="company in companies.data.data.data"
