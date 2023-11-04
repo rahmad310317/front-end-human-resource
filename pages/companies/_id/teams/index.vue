@@ -82,7 +82,7 @@ export default {
               <p class="text-grey">Employees Teams</p>
             </div>
             <NuxtLink
-              :to="{ name: 'companies-id-employees-create' }"
+              :to="{ name: 'companies-id-teams-create' }"
               class="btn btn-primary"
               >Build New Team</NuxtLink
             >

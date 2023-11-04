@@ -1,9 +1,3 @@
-<script>
-export default {
-  layout: "form",
-  middleware: 'auth'
-};
-</script>
 <template>
   <div>
     <section class="py-[70px] flex flex-col items-center justify-center px-4">
@@ -12,7 +6,7 @@ export default {
         Manage your employees to achieve <br />
         a bigger goals for your company
       </p>
-      <form class="w-full card">
+      <form class="w-full card" @submit.prevent="createRoles">
         <div class="form-group">
           <label for="" class="text-grey">Role Name</label>
           <input type="text" class="input-field" value="Product Marketing" />
@@ -33,10 +27,33 @@ export default {
             </li>
           </ul>
         </div>
-        <a href="roles.html" class="w-full btn btn-primary mt-[14px]">
+        <button type="submit" class="w-full btn btn-primary mt-[14px]">
           Save Role
-        </a>
+        </button>
       </form>
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  layout: "form",
+  middleware: "auth",
+
+  data() {
+    return {
+      roles: {
+        name: [],
+      },
+    };
+  },
+  methods: {
+    createRoles() {
+      try {
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
+};
+</script>

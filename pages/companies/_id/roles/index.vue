@@ -55,7 +55,11 @@
               <div class="text-xl font-medium text-dark">Available</div>
               <p class="text-grey">Empower company</p>
             </div>
-            <a href="roles-create.html" class="btn btn-primary">New Role</a>
+            <NuxtLink
+              :to="{ name: 'companies-id-roles-create' }"
+              class="btn btn-primary"
+              >New Role</NuxtLink
+            >
           </div>
         </div>
 
@@ -75,7 +79,7 @@
             <div>
               <div class="mb-1 font-semibold text-dark">{{ role.name }}</div>
               <p class="text-grey">
-                {{ role.responsibilities_count }} Responsibilty
+                {{ role.responsibilities_count }} People Responsibilty
               </p>
             </div>
           </div>

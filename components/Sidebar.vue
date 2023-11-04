@@ -62,7 +62,7 @@
           <img src="/assets/svgs/ic-settings.svg" alt="" />
           Settings
         </a>
-        <button class="nav-link">
+        <button @click="$auth.logout()" class="nav-link">
           <img src="/assets/svgs/ic-signout.svg" alt="" />
           Logout
         </button>

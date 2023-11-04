@@ -9,11 +9,11 @@
       <form class="w-full card" @submit.prevent="createEmployees">
         <div class="form-group">
           <label for="" class="text-grey">Complete Name</label>
-          <input type="text" class="input-field" />
+          <input type="text" class="input-field" v-model="employees.name" />
         </div>
         <div class="form-group">
           <label for="" class="text-grey">Email Address</label>
-          <input type="email" class="input-field" />
+          <input type="email" class="input-field" v-model="employees.email" />
         </div>
         <div class="form-group">
           <label for="" class="text-grey">Gender</label>
@@ -28,13 +28,13 @@
         </div>
         <div class="form-group">
           <label for="" class="text-grey">Age</label>
-          <input type="number" class="input-field" />
+          <input type="number" class="input-field" v-model="employees.age" />
         </div>
         <NuxtLink
           :to="{ name: 'companies-id-employees-create' }"
           class="w-full btn btn-primary mt-[14px]"
         >
-          Continue
+          Continue async createEmployees
         </NuxtLink>
         <div class="text-center">or</div>
         <NuxtLink
@@ -52,5 +52,21 @@
 export default {
   layout: "form",
   middleware: "auth",
+
+  data() {
+    return {
+      employees: {
+        name: "",
+        email: "",
+        age: "",
+      },
+    };
+  },
+  methods: {
+    async createEmployees() {
+      try {
+      } catch (error) {}
+    },
+  },
 };
 </script>

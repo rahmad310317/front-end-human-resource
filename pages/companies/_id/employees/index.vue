@@ -81,7 +81,9 @@ export default {
               <div class="text-xl font-medium text-dark">Statistics</div>
               <p class="text-grey">Your team powers</p>
             </div>
-            <NuxtLink :to="{ name: 'employees-create' }" class="btn btn-primary"
+            <NuxtLink
+              :to="{ name: 'companies-id-employees-create' }"
+              class="btn btn-primary"
               >Add Employee</NuxtLink
             >
           </div>
