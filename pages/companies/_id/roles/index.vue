@@ -101,7 +101,7 @@ export default {
   async fetch() {
     this.roles = await this.$axios.get("/role", {
       params: {
-        company_id: 1,
+        company_id: this.$route.params.id,
         limit: 100,
       },
     });

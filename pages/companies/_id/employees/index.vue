@@ -12,7 +12,7 @@ export default {
     try {
       this.employees = await this.$axios.get("/employee", {
         params: {
-          company_id: 1,
+          company_id: this.$route.params.id,
           limit: 100,
         },
       });

@@ -44,12 +44,17 @@ export default {
     return {
       roles: {
         name: [],
+        company_id: this.$route.params.id,
       },
     };
   },
   methods: {
-    createRoles() {
+    async createRoles() {
       try {
+        let response = await this.$axios.post("/role", this.roles);
+        // redirect to the router push controller
+        this.$router.push({ name: "companies-id-roles" });
+        console.log(response);
       } catch (error) {
         console.log(error);
       }

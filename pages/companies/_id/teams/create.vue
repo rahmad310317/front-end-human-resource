@@ -45,7 +45,6 @@
 export default {
   layout: "form",
   middleware: "auth",
-
   data() {
     return {
       teams: {
@@ -57,7 +56,7 @@ export default {
   methods: {
     async createTeams() {
       try {
-        let response = await this.$axios.post("/teams", this.teams);
+        let response = await this.$axios.post("/team", this.teams);
         // redirect to the router push controller
         this.$router.push({ name: "companies-id-teams" });
         console.log(response);
