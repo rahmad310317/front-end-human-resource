@@ -6,14 +6,24 @@
         Add your new people to grow the <br />
         company reaching their goals
       </p>
-      <form class="w-full card" @submit.prevent="createEmployees">
+      <form class="w-full card">
         <div class="form-group">
           <label for="" class="text-grey">Complete Name</label>
-          <input type="text" class="input-field" v-model="employees.name" />
+          <input
+            type="text"
+            class="input-field"
+            :value="name"
+            @input="updateName"
+          />
         </div>
         <div class="form-group">
           <label for="" class="text-grey">Email Address</label>
-          <input type="email" class="input-field" v-model="employees.email" />
+          <input
+            type="email"
+            class="input-field"
+            :value="email"
+            @input="updateEmail"
+          />
         </div>
         <div class="form-group">
           <label for="" class="text-grey">Gender</label>
@@ -21,6 +31,8 @@
             name=""
             id=""
             class="appearance-none input-field form-icon-chevron_down"
+            :value="gender"
+            @input="updateGender"
           >
             <option value="" selected>Male</option>
             <option value="">Female</option>
@@ -28,20 +40,18 @@
         </div>
         <div class="form-group">
           <label for="" class="text-grey">Age</label>
-          <input type="number" class="input-field" v-model="employees.age" />
+          <input
+            type="number"
+            class="input-field"
+            :value="age"
+            @input="updateAge"
+          />
         </div>
         <NuxtLink
-          :to="{ name: 'companies-id-employees-create' }"
+          :to="{ name: 'companies-id-employees-finish' }"
           class="w-full btn btn-primary mt-[14px]"
         >
-          Continue async createEmployees
-        </NuxtLink>
-        <div class="text-center">or</div>
-        <NuxtLink
-          :to="{ name: 'companies-id-teams' }"
-          class="w-full border btn btn-white"
-        >
-          Back to Teams
+          Continue
         </NuxtLink>
       </form>
     </section>
@@ -52,20 +62,32 @@
 export default {
   layout: "form",
   middleware: "auth",
-
-  data() {
-    return {
-      employees: {
-        name: "",
-        email: "",
-        age: "",
-      },
-    };
+  computed: {
+    name() {
+      return this.$store.state.name;
+    },
+    email() {
+      return this.$store.state.email;
+    },
+    gender() {
+      return this.$store.state.gender;
+    },
+    age() {
+      return this.$store.state.age;
+    },
   },
   methods: {
-    async createEmployees() {
-      try {
-      } catch (error) {}
+    updateName(event) {
+      this.$store.commit("employees/updateName", event.target.value);
+    },
+    updateEmail(event) {
+      this.$store.commit("employees/updateEmail", event.target.value);
+    },
+    updateGender(event) {
+      this.$store.commit("employees/updateGender", event.target.value);
+    },
+    updateAge(event) {
+      this.$store.commit("employees/updateAge", event.target.value);
     },
   },
 };

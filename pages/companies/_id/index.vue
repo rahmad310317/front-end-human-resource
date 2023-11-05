@@ -140,7 +140,6 @@
               </div>
             </div>
           </div>
-
           <!-- History -->
           <div>
             <!-- Section Header -->
