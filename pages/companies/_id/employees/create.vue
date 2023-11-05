@@ -9,48 +9,25 @@
       <form class="w-full card">
         <div class="form-group">
           <label for="" class="text-grey">Complete Name</label>
-          <input
-            type="text"
-            class="input-field"
-            :value="name"
-            @input="updateName"
-          />
+          <input type="text" class="input-field" :value="name" @input="updateName" />
         </div>
         <div class="form-group">
           <label for="" class="text-grey">Email Address</label>
-          <input
-            type="email"
-            class="input-field"
-            :value="email"
-            @input="updateEmail"
-          />
+          <input type="email" class="input-field" :value="email" @input="updateEmail" />
         </div>
         <div class="form-group">
           <label for="" class="text-grey">Gender</label>
-          <select
-            name=""
-            id=""
-            class="appearance-none input-field form-icon-chevron_down"
-            :value="gender"
-            @input="updateGender"
-          >
+          <select name="" id="" class="appearance-none input-field form-icon-chevron_down" :value="gender"
+            @change="updateGender">
             <option value="" selected>Male</option>
             <option value="">Female</option>
           </select>
         </div>
         <div class="form-group">
           <label for="" class="text-grey">Age</label>
-          <input
-            type="number"
-            class="input-field"
-            :value="age"
-            @input="updateAge"
-          />
+          <input type="number" class="input-field" :value="age" @input="updateAge" />
         </div>
-        <NuxtLink
-          :to="{ name: 'companies-id-employees-finish' }"
-          class="w-full btn btn-primary mt-[14px]"
-        >
+        <NuxtLink :to="{ name: 'companies-id-employees-finish' }" class="w-full btn btn-primary mt-[14px]">
           Continue
         </NuxtLink>
       </form>

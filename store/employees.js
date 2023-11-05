@@ -7,6 +7,7 @@ export const state = () => ({
   phone: '',
   team_id: '',
   role_id: '',
+  role_name: '',
 
 
 })
@@ -32,7 +33,8 @@ export const mutations = {
   },
   updateRole_id(state, payload) {
     state.role_id = payload
+  },
+  updateRole_name(state, payload) {
+    state.role_name = payload
   }
-
-
 }
