@@ -1,28 +1,3 @@
-<script>
-export default {
-  layout: "dashboard",
-  middleware: "auth",
-
-  data() {
-    return {
-      employees: [],
-    };
-  },
-  async fetch() {
-    try {
-      this.employees = await this.$axios.get("/employee", {
-        params: {
-          company_id: this.$route.params.id,
-          limit: 100,
-        },
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  },
-};
-</script>
-
 <template>
   <div>
     <!-- Main Content -->
@@ -172,3 +147,28 @@ export default {
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  layout: "dashboard",
+  middleware: "auth",
+
+  data() {
+    return {
+      employees: [],
+    };
+  },
+  async fetch() {
+    try {
+      this.employees = await this.$axios.get("/employee", {
+        params: {
+          company_id: this.$route.params.id,
+          limit: 100,
+        },
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  },
+};
+</script>

@@ -1,28 +1,3 @@
-<script>
-export default {
-  layout: "dashboard",
-  middleware: "auth",
-
-  data() {
-    return {
-      teams: [],
-    };
-  },
-  async fetch() {
-    try {
-      this.teams = await this.$axios.get("/team", {
-        params: {
-          company_id: this.$route.params.id,
-          limit: 100,
-        },
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  },
-};
-</script>
-
 <template>
   <div>
     <!-- Main Content -->
@@ -114,3 +89,28 @@ export default {
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  layout: "dashboard",
+  middleware: "auth",
+
+  data() {
+    return {
+      teams: [],
+    };
+  },
+  async fetch() {
+    try {
+      this.teams = await this.$axios.get("/team", {
+        params: {
+          company_id: this.$route.params.id,
+          limit: 100,
+        },
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  },
+};
+</script>

@@ -41,8 +41,11 @@
           <div
             class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:gap-10 lg:gap-3 mb-[50px]"
           >
+            <p v-if="$fetchState.pending">Fetching Team...</p>
             <div
               class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0"
+              v-else
+              v-for="team in teams.data.data.data"
             >
               <input
                 type="radio"
@@ -50,15 +53,22 @@
                 id="productGrowth"
                 class="absolute inset-0 checked:ring-2 ring-primary rounded-[26px] appearance-none"
               />
-              <img src="/assets/svgs/ric-box.svg" alt="" />
+              <img :src="team.icon" alt="" class="w-24" />
               <div class="mt-6 mb-1 font-semibold text-center text-dark">
-                Product Growth
+                {{ team.name }}
               </div>
-              <p class="text-center text-grey">810 People</p>
+              <p class="text-center text-grey">
+                {{ team.employees_count }} People
+              </p>
             </div>
           </div>
           <div class="flex justify-center">
-            <button type="button" id="continueBtn" class="btn btn-primary">
+            <button
+              @click="createEmployee()"
+              type="button"
+              id="continueBtn"
+              class="btn btn-primary"
+            >
               Continue
             </button>
           </div>
@@ -72,15 +82,50 @@
 export default {
   layout: "form",
   middleware: "auth",
-
+  data() {
+    return {
+      teams: [],
+    };
+  },
   computed: {
     team_id() {
       return this.$store.state.employees.team_id;
     },
-    methods: {
-      updateTeam_id(event) {
-        this.$store.state.commit("employees/updateTeam", event.target.value);
+  },
+  async fetch() {
+    this.teams = await this.$axios.get("/team", {
+      params: {
+        company_id: 1,
+        limit: 100,
       },
+    });
+  },
+  methods: {
+    updateTeam_id(event) {
+      this.$store.commit("employees/updateTeam_id", event.target.value);
+    },
+    async createEmployee() {
+      try {
+        // Send Registration Data to Server
+        let response = await this.$axios.post("/employee", {
+          name: this.$store.state.employees.name,
+          email: this.$store.state.employees.email,
+          gender: this.$store.state.employees.gender,
+          age: this.$store.state.employees.age,
+          phone: this.$store.state.employees.phone,
+          role_id: this.$store.state.employees.role_id,
+          team_id: this.$store.state.employees.team_id,
+        });
+
+        // Redirect to employee page
+        this.$router.push({
+          name: "companies-id-employees",
+        });
+
+        console.log(response);
+      } catch (error) {
+        console.log(error);
+      }
     },
   },
 };
