@@ -32,8 +32,8 @@
             :value="gender"
             @change="updateGender"
           >
-            <option value="" selected>Male</option>
-            <option value="">Female</option>
+            <option value="Male" selected>Male</option>
+            <option value="Female">Female</option>
           </select>
         </div>
         <div class="form-group">

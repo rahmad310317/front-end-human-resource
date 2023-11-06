@@ -20,7 +20,7 @@ export const mutations = {
     state.email = payload
   },
   updateGender(state, payload) {
-    state.email = payload
+    state.gender = payload
   },
   updateAge(state, payload) {
     state.age = payload

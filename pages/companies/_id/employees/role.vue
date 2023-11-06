@@ -109,7 +109,7 @@ export default {
     updateRole_id(event) {
       this.$store.commit("employees/updateRole_id", event.target.value);
       this.$store.commit(
-        "employees/updateRole_Name",
+        "employees/updateRole_name",
         event.target.options[event.target.selectedIndex].text
       );
       this.fetchResponsibilities();
