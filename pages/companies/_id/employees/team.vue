@@ -49,8 +49,10 @@
             >
               <input
                 type="radio"
-                name="productGrowth"
+                name="team_id"
                 id="productGrowth"
+                :value="team.id"
+                @click="updateTeam_id"
                 class="absolute inset-0 checked:ring-2 ring-primary rounded-[26px] appearance-none"
               />
               <img :src="team.icon" alt="" class="w-24" />
@@ -95,7 +97,7 @@ export default {
   async fetch() {
     this.teams = await this.$axios.get("/team", {
       params: {
-        company_id: 1,
+        company_id: this.$route.params.id,
         limit: 100,
       },
     });
