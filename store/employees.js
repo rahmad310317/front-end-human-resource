@@ -11,7 +11,7 @@ export const state = () => ({
 
 
 })
-
+// Update State Global
 export const mutations = {
   updateName(state, payload) {
     state.name = payload

@@ -119,6 +119,15 @@ export default {
           team_id: this.$store.state.employees.team_id,
         });
 
+        // Clear Registration Data from
+        this.$store.commit("employees/UpdateName", " ");
+        this.$store.commit("employees/UpdateEmail", " ");
+        this.$store.commit("employees/UpdateGender", " ");
+        this.$store.commit("employees/UpdateAge", " ");
+        this.$store.commit("employees/UpdatePhone", " ");
+        this.$store.commit("employees/updateRole_id", " ");
+        this.$store.commit("employees/UpdateTeam_id", " ");
+
         // Redirect to employee page
         this.$router.push({
           name: "companies-id-employees",
