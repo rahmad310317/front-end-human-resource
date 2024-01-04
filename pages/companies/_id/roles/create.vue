@@ -37,6 +37,7 @@
 
 <script>
 export default {
+  // middleware auth 
   layout: "form",
   middleware: "auth",
 
