@@ -66,6 +66,7 @@
         <div
           class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:gap-10 lg:gap-3"
         >
+        <!-- fetching data teams -->
           <p v-if="$fetchState.pending">Fetching Teams...</p>
           <div
             class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0"
